@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table'
 import  useCountries  from '../custom-hooks/useCountries';
+import Image from 'react-bootstrap'
 
 
 
