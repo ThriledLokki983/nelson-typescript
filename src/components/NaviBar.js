@@ -27,7 +27,7 @@ function Navibar () {
       </Navbar.Brand>
       <Nav className="nav-links">
         <Nav.Link  href="#home">Home</Nav.Link>
-        <Nav.Link  href="#contact">Let's Connetc</Nav.Link>
+        <Nav.Link  href="#contact">Let's Connect</Nav.Link>
         <Nav.Link  href="#"><FaTwitterSquare size={25} className="fa-icons"/></Nav.Link>
         <Nav.Link  href="#"><FaFacebookSquare size={25} className="fa-icons"/></Nav.Link>
         <Nav.Link  href='#'><FaLinkedin size={25} className="fa-icons"/></Nav.Link>
