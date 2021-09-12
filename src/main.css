@@ -1,0 +1,45 @@
+.hero-container {
+  height: 60vh;
+  background-image: url("/src/assets/background-hero.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links {
+  margin-right: 2rem;
+}
+
+.nav-container {
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+  text-align: center;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+.hero-text p {
+  margin-top: 1.6em;
+}
+
+.footer-text {
+  text-align: center;
+}
+
+.footer-container {
+  background-color: #0D6EFD;
+  color: whitesmoke;
+  padding: 20px 20px;
+}
+
+.footer-icon {
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+}
