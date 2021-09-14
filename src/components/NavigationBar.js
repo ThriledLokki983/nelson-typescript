@@ -1,6 +1,7 @@
 import React from "react";
 import  Navbar  from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import { LinkContainer } from "react-router-bootstrap"; 
 import { Container } from "react-bootstrap";
 import { FaLinkedin, 
           FaFacebookSquare, 
@@ -8,25 +9,24 @@ import { FaLinkedin,
       } from 'react-icons/fa'
 
 
-
-
-
-function Navibar () {
+function NavigationBar () {
     return (
    <Navbar bg="primary" variant="dark" expand="lg" className="nav-container">
-    <Container fluid>
-      <Navbar.Brand href="#home">
+    <Container>
+      <Navbar.Brand className="mx-4" href="#home">
         <img
           alt="global icon"
           src="/global-icon.png"
           width="30"
           height="30"
-          className="d-inline-block align-top"
+          className="d-inline-block align-top mx-3"
         />{' '}
       React Bootstrap
       </Navbar.Brand>
       <Nav className="nav-links">
-        <Nav.Link  href="#home">Home</Nav.Link>
+        <LinkContainer to='/'>
+        <Nav.Link >Home</Nav.Link>
+        </LinkContainer>
         <Nav.Link  href="#contact">Let's Connect</Nav.Link>
         <Nav.Link  href="#"><FaTwitterSquare size={25} className="fa-icons"/></Nav.Link>
         <Nav.Link  href="#"><FaFacebookSquare size={25} className="fa-icons"/></Nav.Link>
@@ -36,5 +36,4 @@ function Navibar () {
   </Navbar>
     )
 }
-
-export default Navibar
+export default NavigationBar

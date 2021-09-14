@@ -1,7 +1,7 @@
 // This hook is used to fetch all countries
 import { useState, useEffect } from 'react';
 
-function useCountries () {
+function useCountries (countryName) {
     const [countries, setCountries] = useState([])
     const [error, setError] = useState()
 
@@ -17,7 +17,7 @@ function useCountries () {
                 }
             }
             getCountryData()
-    }, [])
+    }, [countryName])
     return [countries, error]
     }
 

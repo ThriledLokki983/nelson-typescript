@@ -7,9 +7,6 @@ import { FaLinkedin,
          FaTwitterSquare
         } from 'react-icons/fa'
 
-
-
-
 function Footer () {
     return(
         <Container className="footer-container" fluid>
