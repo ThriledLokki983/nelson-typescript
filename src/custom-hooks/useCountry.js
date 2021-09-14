@@ -1,27 +1,28 @@
 // This hook is used to fetch one specific country
 import { useState, useEffect } from "react";
 
-function useCountry (countryName) {
-    const [country, setCountry] = useState([]);
-    const [error, setError] = useState('')
-    const url = `https://restcountries.eu/rest/v2/name/${countryName}`
+function useCountry (name) {
+    const [countryData, setCountry] = useState(name);
+    const [error, setError] = useState()
+    const url = `https://restcountries.eu/rest/v2/name/${name}`
+    
 
         useEffect(() => {
-            const countryData = async () => {
+            const countryData = async (name) => {
                 try{
-                    const data = await fetch(url)
+                    const data = await fetch(url);                
+                    const dataJson = await data.json();
+                    console.log('test002', dataJson);
+                    setCountry(dataJson);
                     
-                    const dataJson = await data.json()
-                    setCountry(dataJson)
-
                 } catch(error) {
                     setError(error)
                 }
             }; 
             countryData();
-        }, [url])
-        return [country, error]
-}
-
+            
+        }, [url]);
+        return [countryData, error]        
+};
 export default useCountry;
 
