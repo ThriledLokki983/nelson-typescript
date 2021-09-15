@@ -2,12 +2,18 @@
 import { useState, useEffect } from "react";
 
 function useCountry (name) {
-    const [countryData, setCountry] = useState(name);
+    const [countryData, setCountry] = useState([]);
     const [error, setError] = useState()
     const url = `https://restcountries.eu/rest/v2/name/${name}`
-    
+    console.log('hook')
+    console.log('hook-name', name)
+
+    useEffect(() => {
+        console.log('hello')
+    }, [])
 
         useEffect(() => {
+            console.log('running')
             const countryData = async () => {
                 try{
                     const data = await fetch(url);                
@@ -16,13 +22,14 @@ function useCountry (name) {
                     setCountry(dataJson);                    
                 } catch(error) {
                     setError(error)
+                    console.log('error', error)
                 }
             }; 
-            console.log('countryData', countryData())
+            
             countryData();
             
-        }, [url]);
-        console.log('url', url)
+        }, [url, name]);
+        
         return [countryData, error]        
 };
 export default useCountry;
