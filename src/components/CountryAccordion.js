@@ -4,7 +4,7 @@ import Accordion from 'react-bootstrap/Accordion'
 
 function CountryAccordion ({ country } ) {
     console.log('countries', country)
-    console.log('testacc01', country.nativeName)
+    //console.log('currencies', country[0].currencies[0].name)
     
 
     return (        
@@ -12,23 +12,23 @@ function CountryAccordion ({ country } ) {
                 <React.Fragment>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Native Name:</Accordion.Header>
-                        <Accordion.Body >{country.nativeName}</Accordion.Body>                     
+                        <Accordion.Body >{country[0].nativeName}</Accordion.Body>                     
                     </Accordion.Item>                                            
                     <Accordion.Item eventKey="1">
                         <Accordion.Header>Region:</Accordion.Header>
-                        <Accordion.Body>{country.region}</Accordion.Body>
+                        <Accordion.Body>{country[0].region}</Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
                         <Accordion.Header>Currency:</Accordion.Header>
-                        <Accordion.Body>{country.currencies}</Accordion.Body>
+                        <Accordion.Body>{/*country[0].currencies[0].name*/}</Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="3">
                        <Accordion.Header>Languages:</Accordion.Header>
-                       <Accordion.Body>{country.languages}</Accordion.Body>
+                       <Accordion.Body>{/*country[0].languages[0].name*/}</Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="4" >
                         <Accordion.Header>Population:</Accordion.Header>
-                        <Accordion.Body>{country.population}</Accordion.Body>
+                        <Accordion.Body>{country[0].population}</Accordion.Body>
                     </Accordion.Item>
                 </React.Fragment>       
             </Accordion>           

@@ -8,20 +8,21 @@ function useCountry (name) {
     
 
         useEffect(() => {
-            const countryData = async (name) => {
+            const countryData = async () => {
                 try{
                     const data = await fetch(url);                
                     const dataJson = await data.json();
                     console.log('test002', dataJson);
-                    setCountry(dataJson);
-                    
+                    setCountry(dataJson);                    
                 } catch(error) {
                     setError(error)
                 }
             }; 
+            console.log('countryData', countryData())
             countryData();
             
         }, [url]);
+        console.log('url', url)
         return [countryData, error]        
 };
 export default useCountry;
