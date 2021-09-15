@@ -2,15 +2,11 @@
 import { useState, useEffect } from "react";
 
 function useCountry (name) {
-    const [countryData, setCountry] = useState([]);
+    const [countryData, setCountry] = useState(name);
     const [error, setError] = useState()
     const url = `https://restcountries.eu/rest/v2/name/${name}`
     console.log('hook')
     console.log('hook-name', name)
-
-    useEffect(() => {
-        console.log('hello')
-    }, [])
 
         useEffect(() => {
             console.log('running')

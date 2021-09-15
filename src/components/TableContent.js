@@ -2,11 +2,15 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table'
 import  useCountries  from '../custom-hooks/useCountries';
+import { LinkContainer } from "react-router-bootstrap";
 import Image from 'react-bootstrap/Image'
 
 
 function TableContent () {
   const [countries, data] = useCountries();
+
+
+  
 
     return(
       <Container>
@@ -27,7 +31,13 @@ function TableContent () {
               
                 {countries.map((country, key) => (
                   <tr>
-                  <td key={key}><Image src={country.flag} style={{width: '12%'}}/></td>
+                  
+                  <td key={key}>
+                  
+                  <Image src={country.flag} style={{width: '12%'}}/>
+                  
+                  </td>
+                  
                   <td key={key}>{country.name}</td>
                   <td key={key}>{country.capital}</td>
                   <td key={key}>{country.region}</td>

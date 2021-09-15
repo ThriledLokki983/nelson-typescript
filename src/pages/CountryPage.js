@@ -7,15 +7,14 @@ import HeaderCountryPage from "../components/HeaderCountryPage";
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 
-function CountryPage ( { countries }) {
+function CountryPage ( ) {
     const { name } = useParams()
     console.log('paramsName', name)
-    console.log('countriesPage', countries)
     return(
         <React.Fragment>
         <HeaderCountryPage/>
         <NavigationBar />
-        <CountryCard name={name} countries={countries}/>
+        <CountryCard name={name} />
         <Footer/>
         </React.Fragment>
     )
