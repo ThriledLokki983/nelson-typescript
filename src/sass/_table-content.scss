@@ -1,0 +1,29 @@
+td {
+  vertical-align: middle;
+  text-align: center;
+
+  img {
+    width: 35%;
+  }
+}
+
+th {
+  text-align: center;
+}
+
+.heart-add {
+  color: rgb(248, 15, 15);
+  transition: all 0.2s ease-in-out;
+}
+
+.heart-add:hover {
+  transform: scale(1.2);
+}
+
+.cell-flag {
+  width: 20em;
+}
+
+.cell-fav {
+  width: 10em;
+}

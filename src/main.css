@@ -20,6 +20,10 @@
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.5);
 }
 
+.fav-counter {
+  padding: 0 5px;
+}
+
 .hero-text {
   text-align: center;
   margin-top: 4em;
@@ -48,4 +52,41 @@
   height: 50vh;
   text-align: center;
   margin-top: 10%;
+}
+
+.button-card a:hover {
+  color: whitesmoke !important;
+}
+
+.button-card a {
+  padding: 20px 60px;
+}
+
+td {
+  vertical-align: middle;
+  text-align: center;
+}
+td img {
+  width: 35%;
+}
+
+th {
+  text-align: center;
+}
+
+.heart-add {
+  color: #f80f0f;
+  transition: all 0.2s ease-in-out;
+}
+
+.heart-add:hover {
+  transform: scale(1.2);
+}
+
+.cell-flag {
+  width: 20em;
+}
+
+.cell-fav {
+  width: 10em;
 }
