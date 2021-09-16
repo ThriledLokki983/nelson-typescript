@@ -2,12 +2,6 @@ import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 
 function CountryAccordion({ country, error }) {
-  console.log("countries", country);
-
-  const countryBorder = country[0]?.borders?.map((border) => border.name);
-
-  console.log("borders", countryBorder);
-
   return (
     <Accordion>
       <React.Fragment>

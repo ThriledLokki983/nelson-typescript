@@ -1,15 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-
-function HeaderCountryPage () {
-    return (
-        <Container className="hero-country-page-container" fluid >           
-            
-        </Container>
-    )
+function HeaderCountryPage() {
+  return <Container className="hero-country-page-container" fluid></Container>;
 }
 
-
-
-export default HeaderCountryPage
+export default HeaderCountryPage;
