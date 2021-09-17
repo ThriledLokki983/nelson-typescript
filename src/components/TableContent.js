@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Table from "react-bootstrap/Table";
+import { Image } from "react-bootstrap";
 import useCountries from "../custom-hooks/useCountries";
 import SearchBar from "./SearchBar";
 import { RiHeartAddFill } from "react-icons/ri";
