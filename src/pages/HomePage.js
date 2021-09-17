@@ -3,14 +3,16 @@ import NavigationBar from "../components/NavigationBar";
 import HeroText from "../components/HeroText";
 import Footer from "../components/Footer";
 import TableContent from "../components/TableContent";
-import SearchBar from "../components/SearchBar";
+import useCountries from "../custom-hooks/useCountries";
+import { useState } from "react";
 
 function HomePage() {
+  const [data, searhData] = useState();
+
   return (
     <React.Fragment>
       <NavigationBar />
       <HeroText />
-      <SearchBar />
       <TableContent />
       <Footer />
     </React.Fragment>
