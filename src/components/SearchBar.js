@@ -16,7 +16,6 @@ function SearchBar(props) {
     <React.Fragment>
       <InputGroup className="mb-5 mx-auto " style={{ width: "40%" }}>
         <FormControl
-          placeholder="Search a country..."
           onChange={handleInput}
           value={props.searchQuery}
           type="search"
