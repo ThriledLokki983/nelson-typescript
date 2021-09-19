@@ -17,12 +17,12 @@ const reducer = (state = defaultState, action) => {
 
       if (existingCountry) {
         return state;
+      } else {
+        return {
+          ...state,
+          cart: [...state.cart, incomingCountry],
+        };
       }
-
-      return {
-        ...state,
-        cart: [],
-      };
 
     case "DELETE_COUNTRY":
       return {
@@ -34,3 +34,5 @@ const reducer = (state = defaultState, action) => {
       return state;
   }
 };
+
+export default reducer;
