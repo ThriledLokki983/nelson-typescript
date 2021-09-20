@@ -1,5 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { insertCart } from "../redux/action";
+import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import Table from "react-bootstrap/Table";
 import { Image } from "react-bootstrap";
@@ -8,10 +10,12 @@ import SearchBar from "./SearchBar";
 import { RiHeartAddFill } from "react-icons/ri";
 import { useState } from "react";
 import { getSuggestedQuery } from "@testing-library/dom";
+import { useDispatch, useSelector } from "react-redux";
 
 function TableContent() {
   const [countries, data] = useCountries();
   const [searchQuery, setSearchQuery] = useState("");
+  const dispatch = useDispatch();
 
   return (
     <Container>
@@ -59,9 +63,13 @@ function TableContent() {
                 <td key={key}>{country.currencies[0].name}</td>
                 <td key={key}>{country.languages[0].nativeName}</td>
                 <td>
-                  <Link>
+                  <Button
+                    onClick={(e) => dispatch(insertCart(country))}
+                    variant="outline-danger"
+                    className="heart"
+                  >
                     <RiHeartAddFill size={25} className="heart-add" />
-                  </Link>
+                  </Button>
                 </td>
               </tr>
             ))}

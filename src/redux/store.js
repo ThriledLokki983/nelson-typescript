@@ -1,9 +1,14 @@
-import { createStore, Middleware } from "redux";
+import { createStore, Middleware, compose, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import reducer from "./reducer";
+import thunk from "redux-thunk";
 
 const storeFactory = () => {
-  const reduxStore = createStore(reducer, composeWithDevTools());
+  const middlewares = [thunk];
+  const reduxStore = createStore(
+    reducer,
+    composeWithDevTools(applyMiddleware(...middlewares))
+  );
   return reduxStore;
 };
 

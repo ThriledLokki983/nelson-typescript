@@ -37,11 +37,13 @@ function NavigationBar() {
             <FaLinkedin size={25} className="fa-icons" />
           </Nav.Link>
           <Nav.Link href="#">
-            <Button variant="primary" className="fav-counter">
-              <BsBookmarkPlus size={25} /> favList{" "}
-              <Badge bg="secondary">0</Badge>
-              <span className="visually-hidden">unread messages</span>
-            </Button>
+            <LinkContainer to="/cart">
+              <Button variant="primary" className="fav-counter">
+                <BsBookmarkPlus size={25} /> favList{" "}
+                <Badge bg="secondary">0</Badge>
+                <span className="visually-hidden">unread messages</span>
+              </Button>
+            </LinkContainer>
           </Nav.Link>
         </Nav>
       </Container>
