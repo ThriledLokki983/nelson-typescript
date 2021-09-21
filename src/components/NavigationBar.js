@@ -7,10 +7,20 @@ import { FaLinkedin, FaFacebookSquare, FaTwitterSquare } from "react-icons/fa";
 import { BsBookmarkPlus } from "react-icons/bs";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
+import { useSelector } from "react-redux";
 
 function NavigationBar() {
+  const cart = useSelector((state) => {
+    return state.cart;
+  });
   return (
-    <Navbar bg="primary" variant="dark" expand="lg" className="nav-container">
+    <Navbar
+      fixed="top"
+      bg="primary"
+      variant="dark"
+      expand="lg"
+      className="nav-container"
+    >
       <Container>
         <Navbar.Brand className="mx-4" href="#home">
           <img
@@ -38,9 +48,9 @@ function NavigationBar() {
           </Nav.Link>
           <Nav.Link href="#">
             <LinkContainer to="/cart">
-              <Button variant="primary" className="fav-counter">
+              <Button className="fav-counter">
                 <BsBookmarkPlus size={25} /> favList{" "}
-                <Badge bg="secondary">0</Badge>
+                <Badge bg="secondary">{cart.length}</Badge>
                 <span className="visually-hidden">unread messages</span>
               </Button>
             </LinkContainer>
