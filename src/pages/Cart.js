@@ -1,20 +1,16 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import useCountry from "../custom-hooks/useCountry";
-import NotFound from "./NotFound";
-import CountryCard from "../components/CountryCard";
 import HeaderCountryPage from "../components/HeaderCountryPage";
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
+import Table from "react-bootstrap/Table";
+import TableCart from "../components/TableCart";
 
 function Cart() {
-  const { name } = useParams();
-  console.log("paramsName", name);
   return (
     <React.Fragment>
       <HeaderCountryPage />
       <NavigationBar />
-
+      <TableCart />
       <Footer />
     </React.Fragment>
   );
