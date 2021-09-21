@@ -91,3 +91,12 @@ th {
 .cell-fav {
   width: 10em;
 }
+
+.cart-container {
+  height: 100vh;
+}
+
+.cart-table {
+  top: 80px;
+  position: relative;
+}

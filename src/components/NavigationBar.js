@@ -38,15 +38,6 @@ function NavigationBar() {
           </LinkContainer>
           <Nav.Link href="#contact">Let's Connect</Nav.Link>
           <Nav.Link href="#">
-            <FaTwitterSquare size={25} className="fa-icons" />
-          </Nav.Link>
-          <Nav.Link href="#">
-            <FaFacebookSquare size={25} className="fa-icons" />
-          </Nav.Link>
-          <Nav.Link href="#">
-            <FaLinkedin size={25} className="fa-icons" />
-          </Nav.Link>
-          <Nav.Link href="#">
             <LinkContainer to="/cart">
               <Button className="fav-counter">
                 <BsBookmarkPlus size={25} /> favList{" "}
@@ -54,6 +45,12 @@ function NavigationBar() {
                 <span className="visually-hidden">unread messages</span>
               </Button>
             </LinkContainer>
+          </Nav.Link>
+          <Nav.Link href="#">
+            <FaTwitterSquare size={25} className="fa-icons" />
+          </Nav.Link>
+          <Nav.Link href="#">
+            <FaLinkedin size={25} className="fa-icons" />
           </Nav.Link>
         </Nav>
       </Container>

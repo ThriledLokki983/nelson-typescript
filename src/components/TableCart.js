@@ -15,8 +15,8 @@ const TableCart = () => {
 
   return (
     <React.Fragment>
-      <Container>
-        <Table striped bordered hover>
+      <Container className="cart-container">
+        <Table striped bordered hover className="cart-table">
           <thead>
             <tr>
               <th>Flag</th>
