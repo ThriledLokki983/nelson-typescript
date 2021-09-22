@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 function useCountry(name) {
   const [countryData, setCountry] = useState(name);
   const [error, setError] = useState();
-  const url = `https://restcountries.eu/rest/v2/name/${name}`;
+  const url = `https://restcountries.com/v3/name/${name}`;
   console.log("hook");
   console.log("hook-name", name);
 

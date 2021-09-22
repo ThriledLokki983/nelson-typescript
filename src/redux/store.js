@@ -9,6 +9,14 @@ const storeFactory = () => {
     reducer,
     composeWithDevTools(applyMiddleware(...middlewares))
   );
+
+  reduxStore.subscribe(() => {
+    console.log("subscribe running");
+    const cart = reduxStore.getState().reducer.cart;
+    console.log("cart", cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  });
+
   return reduxStore;
 };
 

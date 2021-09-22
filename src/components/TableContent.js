@@ -16,6 +16,7 @@ function TableContent() {
   const [countries, data] = useCountries();
   const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
+  console.log("countries", countries);
 
   return (
     <Container>
@@ -42,7 +43,7 @@ function TableContent() {
         </thead>
         <tbody>
           {countries
-            .filter((country) =>
+            ?.filter((country) =>
               country.name.toLowerCase().includes(searchQuery)
             )
             .map((country, key) => (

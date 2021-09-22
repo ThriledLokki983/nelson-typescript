@@ -1,25 +1,23 @@
 // This hook is used to fetch all countries
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-function useCountries (countryName) {
-    const [countries, setCountries] = useState([])
-    const [error, setError] = useState()
+function useCountries(countryName) {
+  const [countries, setCountries] = useState([]);
+  const [error, setError] = useState();
 
+  useEffect(() => {
+    const getCountryData = async () => {
+      try {
+        const response = await fetch("https://restcountries.com/v3/all");
+        const responseJson = await response.json();
+        setCountries(responseJson);
+      } catch (error) {
+        setError(error);
+      }
+    };
+    getCountryData();
+  }, [countryName]);
+  return [countries, error];
+}
 
-    useEffect(() => {
-            const getCountryData = async () => {
-                try{
-                    const response = await fetch("https://restcountries.eu/rest/v2/")
-                    const responseJson = await response.json()
-                    setCountries(responseJson)
-                } catch(error){
-                    setError(error)
-                }
-            }
-            getCountryData()
-    }, [countryName])
-    return [countries, error]
-    }
-
-    export default useCountries
-
+export default useCountries;
