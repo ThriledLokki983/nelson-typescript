@@ -1,10 +1,12 @@
 // This hook is used to fetch one specific country
 import { useState, useEffect } from "react";
 
+// https://restcountries-v2.herokuapp.com/country/%7Bname%7D
+
 function useCountry(name) {
   const [countryData, setCountry] = useState(name);
   const [error, setError] = useState();
-  const url = `https://restcountries.com/v3/name/${name}`;
+  const url = `https://restcountries-v2.herokuapp.com/country/${name}`;
   console.log("hook");
   console.log("hook-name", name);
 

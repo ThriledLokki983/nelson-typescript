@@ -8,7 +8,9 @@ function useCountries(countryName) {
   useEffect(() => {
     const getCountryData = async () => {
       try {
-        const response = await fetch("https://restcountries.com/v3/all");
+        const response = await fetch(
+          "https://restcountries-v2.herokuapp.com/all"
+        );
         const responseJson = await response.json();
         setCountries(responseJson);
       } catch (error) {

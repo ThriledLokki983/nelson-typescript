@@ -12,7 +12,7 @@ const storeFactory = () => {
 
   reduxStore.subscribe(() => {
     console.log("subscribe running");
-    const cart = reduxStore.getState().reducer.cart;
+    const cart = reduxStore.getState().cart;
     console.log("cart", cart);
     localStorage.setItem("cart", JSON.stringify(cart));
   });
