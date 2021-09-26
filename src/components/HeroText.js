@@ -5,11 +5,7 @@ function HeroText() {
     <React.Fragment>
       <div className="hero-text">
         <h1>Welcome</h1>
-        <p>
-          {" "}
-          I have created this project to help users to identify where El
-          Salvador is located
-        </p>
+        <p>Project created as part of my formation in Integrify Academy</p>
       </div>
     </React.Fragment>
   );

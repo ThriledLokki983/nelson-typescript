@@ -2,10 +2,26 @@
   margin-right: 2rem;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: whitesmoke;
+
+  &:hover {
+    background-color: #0b5ed7;
+    color: #fff;
+    border-radius: 7px;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: #0a58ca;
+    border-color: #0a53be;
+  }
+}
+
 .nav-container {
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.5);
 }
 
-.fav-counter {
-  padding: 0 5px;
+.toggle-button {
+  border-color: #ebebeb;
 }

@@ -19,7 +19,7 @@ function TableContent() {
   console.log("countries", countries);
 
   return (
-    <Container>
+    <Container className="table-container">
       <SearchBar
         onSearch={countries}
         setSearchQuery={setSearchQuery}
@@ -46,23 +46,23 @@ function TableContent() {
             .filter((country) =>
               country.name.toLowerCase().includes(searchQuery)
             )
-            .map((country, key) => (
-              <tr>
-                <td key={key}>
+            .map((country) => (
+              <tr key={country.name}>
+                <td>
                   <Link to={`/country/${country.name}`}>
                     <Image src={country.flag} />
                   </Link>
                 </td>
 
-                <td key={key}>
+                <td>
                   <Link to={`/country/${country.name}`}>{country.name}</Link>
                 </td>
-                <td key={key}>{country.capital}</td>
-                <td key={key}>{country.region}</td>
-                <td key={key}>{country.population}</td>
-                <td key={key}>{country.timezones[0]}</td>
-                <td key={key}>{country.currencies[0].name}</td>
-                <td key={key}>{country.languages[0].nativeName}</td>
+                <td>{country.capital}</td>
+                <td>{country.region}</td>
+                <td>{country.population}</td>
+                <td>{country.timezones[0]}</td>
+                <td>{country.currencies[0].name}</td>
+                <td>{country.languages[0].nativeName}</td>
                 <td>
                   <Button
                     onClick={(e) => dispatch(insertCart(country))}
@@ -74,7 +74,6 @@ function TableContent() {
                 </td>
               </tr>
             ))}
-          ;
         </tbody>
       </Table>
     </Container>

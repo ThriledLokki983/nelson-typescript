@@ -8,7 +8,7 @@ function NotFound() {
   return (
     <React.Fragment>
       <Header />
-      <Navibar />
+
       <Container className="not-found" fluid>
         <h1>404: Not Found</h1>
       </Container>
