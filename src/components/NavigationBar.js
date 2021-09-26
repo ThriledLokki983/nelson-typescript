@@ -40,15 +40,18 @@ function NavigationBar({ themeChecked, checked }) {
           Country API Project
         </Navbar.Brand>
         <Nav className="nav-links">
-          <Nav.Link href="/">Home</Nav.Link>
+          <LinkContainer to="/">
+            <Nav.Link>Home</Nav.Link>
+          </LinkContainer>
 
           <Nav.Link href="#contact">Let's Connect</Nav.Link>
-
-          <Button href="/cart" className="fav-counter">
-            <BsBookmarkPlus size={25} /> favList{" "}
-            <Badge bg="secondary">{cart.length}</Badge>
-            <span className="visually-hidden">unread messages</span>
-          </Button>
+          <LinkContainer to="/cart">
+            <Button className="fav-counter">
+              <BsBookmarkPlus size={25} /> favList{" "}
+              <Badge bg="secondary">{cart.length}</Badge>
+              <span className="visually-hidden">unread messages</span>
+            </Button>
+          </LinkContainer>
 
           <ToggleButton
             className="toggle-button"

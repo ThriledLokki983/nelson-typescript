@@ -9,7 +9,6 @@ function Cart() {
   return (
     <React.Fragment>
       <HeaderCountryPage />
-
       <TableCart />
       <Footer />
     </React.Fragment>
