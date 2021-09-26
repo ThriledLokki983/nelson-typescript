@@ -30,7 +30,7 @@ const TableCart = () => {
           <tbody>
             {cart.map((country) => {
               return (
-                <tr>
+                <tr key={country.name}>
                   <td style={{ width: "20em" }}>
                     <Image src={country.flag} style={{ width: "25%" }} />
                   </td>

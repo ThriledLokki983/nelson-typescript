@@ -14,10 +14,7 @@ function CountryCard() {
 
   return (
     <Container>
-      <Card
-        className="my-5 mx-auto shadow"
-        style={{ width: "40%", backgroundColor: "whitesmoke" }}
-      >
+      <Card className="mx-auto shadow card-container" style={{ width: "40%" }}>
         <Card.Header as="h3" style={{ textAlign: "center" }}>
           {data[0]?.name}
         </Card.Header>
