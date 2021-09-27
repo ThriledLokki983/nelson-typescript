@@ -16,6 +16,7 @@ function App() {
   const [theme, setTheme] = useState(ligthTheme);
   const [checked, setChecked] = useState(false);
   const body = document.body;
+  let currentTheme = localStorage.getItem("theme");
 
   console.log({ theme });
 
